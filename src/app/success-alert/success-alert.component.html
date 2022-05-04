@@ -1,0 +1,41 @@
+
+<div class="row flex-wrap m-2">
+
+<div class="col-6 mb-3"><div class="card">
+    <!-- <p>success-alert works!</p> -->
+    <span class="title">String Interpolation</span>
+    <p>Successfully connected to a server ID {{ serverClick() }} and server status is {{ serverStatus }}.</p>
+</div></div>
+
+<div class="col-6 mb-3"><div class="card">
+    <span class="title">Property Binding</span>
+    <button class="col-4 btn btn-success" [disabled]='!allowserver'>Successfully Added</button>
+    <p [innerText]="allowserver"></p>
+</div></div>
+
+<div class="col-6 mb-3"><div class="card">
+    <span class="title">Event Binding</span>
+    <button class="col-4 btn btn-success" (click)="onCLickServer()">Successfully Added</button>
+    <p>{{ serverCreates }}</p>
+</div></div>
+
+<div class="col-6 mb-3"><div class="card">
+    <span class="title">Passing and using data with event binding</span>
+    <input type="text" class="form-control" (input)="onUpdate($event)">
+    <p>{{ serverName }}</p>
+</div></div>
+
+<div class="col-6 mb-3"><div class="card">
+    <span class="title">Two-way Binding</span>
+    <input type="text" class="form-control" [(ngModel)]="serverTestName">
+    <p>{{ serverTestName }}</p>
+</div></div>
+
+<div class="col-12 mb-3"><div class="card">
+    <span class="title">Combining All <i>Data Binding</i></span>
+    <input type="text" class="form-control" [(ngModel)]="serverTestName">
+    <button class="col-3 btn btn-warning" (click)="onCLickServer()">Result</button>
+    <p>{{ serverCreates }}</p>
+</div></div>
+
+</div>

@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --title-color: rgb(13, 7, 181);
+    --succes-color: green;
+    --danger-color: red;
+    --white-color: #fff;
+}
+body{
+    margin: 40px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    color: var(--title-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+span{
+    display: block;
+}
+.btn-success,.btn-warning{
+    margin: 15px;
+}
+.btn-warning{
+    color: var(--white-color);
+    font-weight: 600;
+}
+.btn:is(:hover,:focus,:active){
+    color: var(--white-color);
+    box-shadow: none;
+}
+.card{
+    padding: 15px;
+    height: 100%;
+}

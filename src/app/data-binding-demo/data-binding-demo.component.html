@@ -1,0 +1,6 @@
+<div class="col-6 container">
+    <span class="title">Username</span>
+    <input type="text" class="form-control" [(ngModel)]="FormUsername" (keypress)="onBindingUsername()">
+    <p>{{ FormUsername }}</p>
+    <button class="col-4 btn btn-warning" [disabled]="!disabledUsername" (click)="onClickpress()">Bind</button>
+</div>
